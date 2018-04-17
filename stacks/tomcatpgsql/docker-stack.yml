@@ -9,8 +9,8 @@ services:
        - /opt/db_data:/var/lib/postgresql/data
      restart: always
      deploy:
-     placement:
-       constraints: [node.role == worker]
+       placement:
+         constraints: [node.role == worker]
      environment:
        POSTGRES_PASSWORD: example
        POSTGRES_USER: postgres
@@ -23,5 +23,5 @@ services:
      links: 
        - db
      deploy:
-     placement:
-       constraints: [node.role == worker]
+       placement:
+         constraints: [node.role == worker]
