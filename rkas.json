@@ -166,5 +166,5 @@
     "volumes": ["/var/lib/postgresql/data"]
   }
     ]
-  },
+  }
 ]
