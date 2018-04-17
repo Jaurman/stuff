@@ -158,7 +158,7 @@
       {
         "name": "POSTGRES_PASSWORD",
         "label": "Superuser password"
-      }
+      },
       {
         "name": "POSTGRES_DB",
         "label": "Database name"
