@@ -10,9 +10,9 @@ services:
      environment:
        POSTGRES_PASSWORD: example
        POSTGRES_USER: postgres
-    tomcat:
-      image: rkas:latest
-      ports: 8080
-      volumes: /opt/tomcat/webapps
+   tomcat:
+     image: rkas:latest
+     ports: 8080
+     volumes: /opt/tomcat/webapps
 volumes:
     db_data:
