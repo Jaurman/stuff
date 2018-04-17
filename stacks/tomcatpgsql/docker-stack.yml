@@ -12,7 +12,7 @@ services:
        POSTGRES_PASSWORD: example
        POSTGRES_USER: postgres
    tomcat:
-     image: rkastomcat
+     image: localhost:5000/rkastomcat
      ports: 
        - 8080
      volumes: 
