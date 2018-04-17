@@ -137,5 +137,34 @@
       }
     ],
     "volumes": ["/var/jenkins_home"]
+  },
+  {
+    "type": "stack",
+    "title": "Tomcat & PostgreSQL",
+    "description": "Tomcat instance with a PostgreSQL database",
+    "note": "Deploys a custom Tomcat instance connected to a PostgreSQL database.",
+    "categories": ["CMS"],
+    "platform": "linux",
+    "logo": "http://tomcat.apache.org/res/images/tomcat.png",
+    "repository": {
+      "url": "https://github.com/Jaurman/stuff",
+      "stackfile": "stacks/tomcatpgsql/docker-stack.yml"
+    },
+    "env": [
+      {
+        "name": "POSTGRES_USER",
+        "label": "Superuser"
+      },
+      {
+        "name": "POSTGRES_PASSWORD",
+        "label": "Superuser password"
+      }
+    ],
+    "ports": [
+      "5432/tcp"
+    ],
+    "volumes": ["/var/lib/postgresql/data"]
   }
+    ]
+  },
 ]
