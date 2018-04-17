@@ -17,11 +17,11 @@ services:
    tomcat:
      image: localhost:5000/rkastomcat
      ports: 
-       - 8080
+       - "8080:8080"
      volumes: 
        - /opt/rkastomcat/projektid:/opt/tomcat/webapps
      links: 
        - db
      deploy:
        placement:
-         constraints: [node.role == worker]
+         constraints: [node.role == manager]
