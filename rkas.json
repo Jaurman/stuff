@@ -164,5 +164,18 @@
       "5432/tcp"
     ],
     "volumes": ["/var/lib/postgresql/data"]
-  }
+  },
+ {
+"title": "Registry",
+"description": "Docker image registry",
+"categories": ["docker"],
+"platform": "linux",
+"logo": "https://cloudinovasi.id/assets/img/logos/registry.png",
+"image": "registry:latest",
+"registry": "127.0.0.1:5000",
+"ports": [
+"5000/tcp"
+],
+"volumes": ["/var/lib/registry"]
+} 
 ]
