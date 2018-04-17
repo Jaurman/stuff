@@ -10,7 +10,7 @@ services:
      restart: always
      deploy:
        placement:
-         constraints: [node.role == worker]
+         constraints: [node.role == manager]
      environment:
        POSTGRES_PASSWORD: example
        POSTGRES_USER: postgres
