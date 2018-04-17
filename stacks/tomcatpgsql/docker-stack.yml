@@ -14,5 +14,3 @@ services:
      image: rkas:latest
      ports: 8080
      volumes: /opt/tomcat/webapps
-volumes:
-    db_data:
