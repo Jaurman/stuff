@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+   db:
+     image: postgres:9.6.8-alpine
+     ports: 5432
+     volumes:
+       - db_data:/var/lib/postgresql/data
+     restart: always
+     environment:
+       POSTGRES_PASSWORD: example
+       POSTGRES_USER: postgres
+volumes:
+    db_data:
