@@ -13,4 +13,5 @@ services:
    tomcat:
      image: rkas:latest
      ports: 8080
-     volumes: /opt/tomcat/webapps
+     volumes: 
+       - webapps:/opt/tomcat/webapps
