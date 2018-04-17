@@ -13,7 +13,7 @@ services:
        POSTGRES_USER: postgres
    tomcat:
      image: localhost:5000/rkastomcat
-     ports: 
-       - 8080
-     volumes: 
-       - /opt/rkastomcat/projektid:/opt/tomcat/webapps
+     ports: 8080
+     volumes: /opt/rkastomcat/projektid:/opt/tomcat/webapps
+     links: 
+       - db
