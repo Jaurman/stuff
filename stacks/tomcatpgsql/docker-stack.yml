@@ -3,15 +3,17 @@ version: '3'
 services:
    db:
      image: postgres:9.6.8-alpine
-     ports: 5432
+     ports: 
+       - 5432
      volumes:
-       - db_data:/var/lib/postgresql/data
+       - /opt/db_data:/var/lib/postgresql/data
      restart: always
      environment:
        POSTGRES_PASSWORD: example
        POSTGRES_USER: postgres
    tomcat:
-     image: rkas:latest
-     ports: 8080
+     image: rkastomcat:latest
+     ports: 
+       - 8080
      volumes: 
-       - webapps:/opt/tomcat/webapps
+       - /opt/rkastomcat/projektid:/opt/tomcat/webapps
