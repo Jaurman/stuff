@@ -159,6 +159,10 @@
         "name": "POSTGRES_PASSWORD",
         "label": "Superuser password"
       }
+      {
+        "name": "POSTGRES_DB",
+        "label": "Database name"
+      }
     ],
     "ports": [
       "5432/tcp"
