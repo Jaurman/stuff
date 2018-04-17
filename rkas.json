@@ -2,7 +2,7 @@
 {
 "type": "container",
 "title": "Tomcat",
-"description": "RKAS custom tomcat",
+"description": "Custom tomcat",
 "categories": [
 "webserver"
 ],
@@ -143,7 +143,7 @@
     "title": "Tomcat & PostgreSQL",
     "description": "Tomcat instance with a PostgreSQL database",
     "note": "Deploys a custom Tomcat instance connected to a PostgreSQL database.",
-    "categories": ["CMS"],
+    "categories": ["tomcat"],
     "platform": "linux",
     "logo": "http://tomcat.apache.org/res/images/tomcat.png",
     "repository": {
