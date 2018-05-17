@@ -30,5 +30,4 @@ services:
        - ${NETWORK}
 networks:
   ${NETWORK}:
-    external:
 
