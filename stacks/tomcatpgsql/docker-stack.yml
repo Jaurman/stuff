@@ -12,9 +12,9 @@ services:
        POSTGRES_PASSWORD: example
        POSTGRES_USER: postgres
        POSTGRES_DB: mydatabase
-       NETWORK: bridge
+       NETWORK: test
      networks:
-       - bridge
+       - ${NETWORK}
 
    tomcat:
      image: localhost:5000/rkastomcat
@@ -27,4 +27,4 @@ services:
      links: 
        - db
      networks:
-       - bridge
+       - ${NETWORK}
