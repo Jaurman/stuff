@@ -162,6 +162,10 @@
       {
         "name": "POSTGRES_DB",
         "label": "Database name"
+      },
+            {
+        "name": "NETWORK",
+        "label": "Choose network (env/tst)"
       }
     ],
     "ports": [
