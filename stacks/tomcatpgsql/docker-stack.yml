@@ -29,5 +29,4 @@ services:
        - ${NETWORK}
 networks:
   ${NETWORK}:
-    driver: bridge
 
