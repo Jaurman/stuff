@@ -14,8 +14,7 @@ services:
        POSTGRES_DB: mydatabase
        NETWORK: network
      networks:
-
-         - ${NETWORK}
+       - ${NETWORK}
 
    tomcat:
      image: localhost:5000/rkastomcat
@@ -28,5 +27,7 @@ services:
      links: 
        - db
      networks:
-       external:
-         - ${NETWORK}
+       - ${NETWORK}
+networks:
+  external:
+    name: ${NETWORK}
