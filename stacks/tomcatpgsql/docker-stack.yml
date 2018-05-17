@@ -29,5 +29,5 @@ services:
        - ${NETWORK}
 networks:
   ${NETWORK}:
-    aliases: ${NETWORKS}.docker
+    driver: overlay
 
