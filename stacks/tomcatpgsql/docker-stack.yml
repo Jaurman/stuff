@@ -4,8 +4,8 @@ services:
      image: postgres:9.6.8-alpine
      ports: 
        - 5432
-     restart_policy:
-       condition: on-failure
+       restart_policy:
+         condition: on-failure
      environment:
        POSTGRES_PASSWORD: example
        POSTGRES_USER: postgres
