@@ -1,18 +1,18 @@
 version: '3'
-
 services:
    db:
      image: postgres:9.6.8-alpine
      ports: 
        - 5432
-     volumes:
-       - /opt/db_data:/var/lib/postgresql/data
-     restart: always
+     restart_policy:
+       condition: on-failure
      environment:
        POSTGRES_PASSWORD: example
        POSTGRES_USER: postgres
        POSTGRES_DB: mydatabase
        NETWORK: network
+     volumes:
+       - /opt/db_data:/var/lib/postgresql/data
      networks:
        - ${NETWORK}
 
