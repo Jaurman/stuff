@@ -12,12 +12,19 @@ services:
        POSTGRES_PASSWORD: example
        POSTGRES_USER: postgres
        POSTGRES_DB: mydatabase
+       NETWORK: bridge
+     networks:
+       - bridge
 
    tomcat:
      image: localhost:5000/rkastomcat
      ports: 
        - "8080:8080"
+     environment:
+        NETWORK: network
      volumes: 
        - /opt/rkastomcat/projektid:/opt/tomcat/webapps
      links: 
        - db
+     networks:
+       - bridge
