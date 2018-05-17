@@ -29,5 +29,5 @@ services:
        - ${NETWORK}
 networks:
   ${NETWORK}:
-    driver: overlay
+    driver: bridge
 
