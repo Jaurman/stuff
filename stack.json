@@ -8,13 +8,19 @@
 ],
 "platform": "linux",
 "logo": "http://tomcat.apache.org/res/images/tomcat.png",
-"image": "rkastomcat:latest",
+"image": "localhost:5000/rkastomcat:latest",
 "ports": [
 "8080/tcp"
 ],
+"env": [
+{
+"name": "APPNAME",
+"label": "Enter application name"
+}
+ ],
 "volumes": [
-"/opt/tomcat/webapps"
-]
+"/opt/tomcat/webapps/${APPNAME}"
+],
 },
   {
     "type": "container",
