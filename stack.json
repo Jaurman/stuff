@@ -18,7 +18,7 @@
 "label": "Enter application name"
 }
  ],
-"volumes": ["/opt/tomcat/webapps/"${APPNAME}]
+"volumes": ["/opt/tomcat/webapps/"]
 },
   {
     "type": "container",
