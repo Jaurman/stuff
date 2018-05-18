@@ -20,7 +20,7 @@
  ],
 "volumes": [
 "/opt/tomcat/webapps/${APPNAME}"
-],
+]
 },
   {
     "type": "container",
