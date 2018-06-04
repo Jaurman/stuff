@@ -14,7 +14,7 @@ services:
      volumes:
        - /opt/db_data:/var/lib/postgresql/data
    tomcat:
-     image: rkas/rkastomcat
+     image: localhost:5000/rkastomcat
      ports: 
        - "8080:8080"
      volumes: 
