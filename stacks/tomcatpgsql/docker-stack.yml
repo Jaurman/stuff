@@ -7,6 +7,7 @@ services:
          condition: on-failure
      ports: 
        - 5432
+     net: host
      environment:
        POSTGRES_PASSWORD: example
        POSTGRES_USER: postgres
@@ -16,6 +17,7 @@ services:
    tomcat:
      image: centos:5000/rkastomcat
      ports: 
-       - "8080:8080"
+       - 8080
+     net: host
      volumes: 
        - /opt/rkastomcat/projektid:/opt/tomcat/webapps
