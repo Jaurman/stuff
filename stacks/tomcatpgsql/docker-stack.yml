@@ -6,7 +6,7 @@ services:
        restart_policy:
          condition: on-failure
      ports: 
-       - "5432"
+       - "5432:5432"
      environment:
        POSTGRES_PASSWORD: example
        POSTGRES_USER: postgres
@@ -18,7 +18,7 @@ services:
    tomcat:
      image: localhost:5000/rkastomcat
      ports: 
-       - 8080
+       - "8080:8080"
      networks: 
        - frontend
      volumes: 
