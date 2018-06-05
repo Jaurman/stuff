@@ -6,16 +6,25 @@ services:
        restart_policy:
          condition: on-failure
      ports: 
-       - 5432
+       - "5432"
      environment:
        POSTGRES_PASSWORD: example
        POSTGRES_USER: postgres
        POSTGRES_DB: mydatabase
+     networks:
+       - backend
      volumes:
-       - /opt/db_data:/var/lib/postgresql/data
+       - "db_data:/var/lib/postgresql/data"
    tomcat:
      image: localhost:5000/rkastomcat
      ports: 
        - 8080
+     networks: 
+       - frontend
      volumes: 
-       - /opt/rkastomcat/projektid:/opt/tomcat/webapps
+       - "/opt/rkastomcat/projektid:/opt/tomcat/webapps"
+networks:
+  backend:
+  frontend:
+volumes:
+  db_data:
