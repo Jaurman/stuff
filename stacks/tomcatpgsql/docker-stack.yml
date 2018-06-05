@@ -26,5 +26,6 @@ services:
 networks:
   backend:
   frontend:
+    driver: "bridge"
 volumes:
   db_data:
